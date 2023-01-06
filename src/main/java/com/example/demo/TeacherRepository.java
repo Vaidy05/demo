@@ -10,6 +10,7 @@ public class TeacherRepository {
     private HashMap<String,Teacher> teacherHashMap;
 
     private HashMap<String , Courses> courseHashMap;
+    private HashMap<String,List<String>> teacherCourseMapping;
 
     public TeacherRepository() {
         this.courseHashMap = new HashMap<>();
@@ -17,7 +18,7 @@ public class TeacherRepository {
         this.teacherCourseMapping= new HashMap<>();
     }
 
-    private HashMap<String,List<String>> teacherCourseMapping;
+
 
     public void addCourse(Courses course){
 

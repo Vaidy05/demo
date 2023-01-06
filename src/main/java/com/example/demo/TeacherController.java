@@ -53,14 +53,14 @@ public class TeacherController {
     }
 
     @GetMapping("/get_course_by_teacher_name/{teacher}")
-    public ResponseEntity<List<String>> getStudentsByTeacherName(@PathVariable String teacher){
+    public ResponseEntity<List<String>> getgetCousreTeacherPair(@PathVariable String teacher){
         List<String> teacherCoursePair = teacherService.getCousreTeacherPair(teacher);
 
         return new ResponseEntity<>(teacherCoursePair, HttpStatus.CREATED);
     }
 
     @GetMapping("/get_all_students")
-    public ResponseEntity<List<String>> getAllStudents(){
+    public ResponseEntity<List<String>> getAllCourses(){
         List<String> courseList = teacherService.getAllCourses();
 
         return new ResponseEntity<>(courseList, HttpStatus.CREATED);

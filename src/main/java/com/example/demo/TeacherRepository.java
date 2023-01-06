@@ -11,6 +11,12 @@ public class TeacherRepository {
 
     private HashMap<String , Courses> courseHashMap;
 
+    public TeacherRepository() {
+        this.courseHashMap = new HashMap<>();
+        this.teacherHashMap = new HashMap<>();
+        this.teacherCourseMapping= new HashMap<>();
+    }
+
     private HashMap<String,List<String>> teacherCourseMapping;
 
     public void addCourse(Courses course){
@@ -38,26 +44,17 @@ public class TeacherRepository {
 
     public Courses getCourseByName(String courseName){
 
-        if(courseHashMap.containsKey(courseName)){
             return courseHashMap.get(courseName);
-        }
-        return null;
     }
 
     public Teacher getTeacherByName(String teacherName){
 
-        if(teacherHashMap.containsKey(teacherName)){
             return teacherHashMap.get(teacherName);
-        }
-        return null;
     }
 
     public List<String> getCourseTeacherPair(String teacherName){
-
-        if(teacherCourseMapping.containsKey(teacherName))
             return teacherCourseMapping.get(teacherName);
 
-        return null;
     }
 
     public List<String> getAllCourses(){
